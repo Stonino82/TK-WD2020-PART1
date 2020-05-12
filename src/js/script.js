@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 factMathText.innerText = 'loading...';
                 factMathText.style.opacity = '0.3';
 
-                const response = await fetch('http://numbersapi.com/'+randomNumber+'/math?json');
+                const response = await fetch('https://numbersapi.com/'+randomNumber+'/math?json');
                 const json = await response.json();
                 // console.log('JSON', json)
     
