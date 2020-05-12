@@ -1,0 +1,47 @@
+////////////////////////// RANDOM FACTS //////////////////////////
+@mixin random-fact ($background-color, $text-color:$white) {
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-color;
+    background-color: $background-color;
+}
+
+.random-facts {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .random-fact-1 {
+        @include random-fact($secondary-color);
+    }
+    .random-fact-2 {
+        @include random-fact($third-color, $black);
+    }
+    .random-fact-3 {
+        @include random-fact($primary-color);
+        
+    }
+    h3 {
+        font-size: 4rem;
+        font-weight: 600;
+        margin: 2rem;
+    }
+    p {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .random-facts {
+        flex-direction: column;
+        height: 1000px;
+    }
+}
+@media screen and (min-width: 992px) {}
+////////////////////////// RANDOM FACTS //////////////////////////

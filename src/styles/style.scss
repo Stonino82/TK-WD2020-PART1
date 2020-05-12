@@ -1,0 +1,27 @@
+@import 'reset-normalize';
+@import 'colors';
+@import 'typography';
+
+//COMPONENTS
+@import 'logos';
+@import 'header';
+@import 'articles';
+@import 'slider';
+@import 'comparison';
+@import 'random-facts';
+@import 'footer';
+
+body {
+    font-family: $base-font-family;
+    font-weight: 500;
+    background-color: $white;
+    color: $black;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+.grid-container {
+    width: 100%;
+}
+
+
+

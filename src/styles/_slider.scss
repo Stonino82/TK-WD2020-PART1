@@ -1,0 +1,88 @@
+////////////////////////// SLIDER //////////////////////////
+.slider{
+    width: 100%;
+    height: 740px;
+    background: blue;
+    position: relative;
+    
+    img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+    } 
+}
+
+// Tiny slider's own classes
+#tns1-ow {
+    position: relative;
+
+    .tns-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        width: 70px;
+        display: flex;
+        justify-content: space-evenly;
+
+        .tns-nav-active {
+            background-color: $third-color;
+        }
+
+        button {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            border: none;
+            padding: 0;
+        }
+    }
+    .tns-controls {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        background-attachment: red;
+        width: 100%;
+        top: 50%;
+        z-index: 99;
+        outline: 0;
+
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: none;
+        }
+        [data-controls="next"] {
+            position: relative;
+            right: 30px;
+
+            &::before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f054";
+                color: $secondary-color;
+            }
+        }
+        [data-controls="prev"] {
+            position: relative;
+            left: 30px;
+
+            &::before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f053";
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tns-controls {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 992px) {}
+////////////////////////// SLIDER //////////////////////////

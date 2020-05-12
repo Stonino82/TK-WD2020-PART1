@@ -1,0 +1,34 @@
+////////////////////////// LOGOS //////////////////////////
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+
+    .logo__line {
+        height: 50px;
+        mix-blend-mode: normal;
+        border-right: 1px solid #fff;
+        opacity: 0.5;
+    }
+    .logo__lola {
+        width: 68.89px;
+        height: 34px;
+    }
+    .logo__lola svg {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        height: 50px;
+    }
+}
+@media screen and (min-width: 992px) {}
+////////////////////////// LOGOS //////////////////////////

@@ -1,0 +1,50 @@
+////////////////////////// COMPARISON //////////////////////////
+@mixin comparison__side($background-color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: $background-color;
+}
+
+.comparison {
+    min-height: 550px;
+    width: 100%;
+    display: flex;
+
+    .comparison__side1 {
+        @include comparison__side($secondary-color);
+    }
+    .comparison__side2 {
+        @include comparison__side($primary-color);
+    }
+    
+    .comparison__inner {
+        width: 80%;
+    }
+    ul {
+       color: $white;
+       list-style: disc;
+       margin: 4rem 0 2rem 0;
+       
+       li {
+        font-size: 1.375rem;
+        line-height: 2.25rem;
+        letter-spacing: -0.4px;
+        font-weight: 500;
+        margin-left: 2rem;
+       }
+    }
+}
+@media screen and (max-width: 768px) {
+    .comparison {
+        flex-direction: column;
+
+        .comparison__side1, .comparison__side2 {
+            width: 100%;
+            padding: 10%;
+        }
+    }
+}
+@media screen and (min-width: 992px) {}
+////////////////////////// COMPARISON //////////////////////////
