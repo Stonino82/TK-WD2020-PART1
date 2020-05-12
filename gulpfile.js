@@ -20,7 +20,7 @@ function style() {
         // 2. pass that file through sass compiler (gulp-sass)
         .pipe(sass().on('error', sass.logError))
         // 3. add CSS prefix with Autoprefixer
-        .pipe(autoprefixer('last 2 versions'))
+        .pipe(autoprefixer({grid: 'autoplace', BrowsersList: ['last 2 version', 'safari 5', 'ie6', 'ie7', 'ie 8', 'ie 9', 'ie 10', 'ie 11', 'opera 12.1', 'ios 6', 'android 4']}))
         // 4. concat all the scss files into 1 (gulp-concat)
         .pipe(concat('style.css'))
         // 5. minify this file (gulp-clean-css)

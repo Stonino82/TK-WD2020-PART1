@@ -60,6 +60,12 @@ header {
         align-items: center;
         height: 100%;
 
+        //for IE
+        & > * { 
+            align-self: center;
+            justify-self: center;
+        }
+
         .header__masthead {
             padding: 0;
             justify-content: center;

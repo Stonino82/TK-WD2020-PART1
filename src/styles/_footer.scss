@@ -12,6 +12,12 @@ footer {
     justify-content: center;
     align-items: flex-start;
 
+    //for IE
+    & > * { 
+        align-self: flex-start;
+        justify-self: center;
+    }
+
         .footer__masthead {
             grid-area: footer__masthead;
             display: flex;
@@ -37,9 +43,16 @@ footer {
         }
         .links {
             grid-area: links;
+            width: 100%;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
+
+            //for IE
+            & > * { 
+                align-self: flex-start;
+                justify-self: space-between;
+            }
 
             ul {
                 li{
@@ -66,9 +79,18 @@ footer {
         grid-template-columns: 1fr;
         align-items: center;
 
+        & > * { 
+            align-self: center;
+        }
+
         .footer__masthead {
             align-items: center;
             justify-content: center;
+
+            & > * { 
+                align-self: center;
+                justify-self: center;
+            }
         }
 
         .links {
@@ -76,6 +98,11 @@ footer {
             align-items: flex-start;
             justify-content: space-between;
             margin-top: 20px;
+
+            & > * { 
+                align-self: flex-start;
+                justify-self: space-between;
+            }
 
             /* Style for accordion */
             .accordion {
@@ -122,6 +149,11 @@ footer {
             height: 100%;
             align-items: center;
             justify-content: center;
+
+            & > * { 
+                align-self: center;
+                justify-self: center;
+            }
         }
     }
 }
