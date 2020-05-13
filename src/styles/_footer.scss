@@ -2,19 +2,18 @@
 footer {
     background-color: $gray;
     min-height: 380px;
-    padding: 5%;
     display: grid;
     grid-template-areas:
         'footer__masthead links'
         'copyright copyright';
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 5fr 1fr;
     grid-template-columns: 4fr 4fr;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
     //for IE
     & > * { 
-        align-self: flex-start;
+        align-self: center;
         justify-self: center;
     }
 
@@ -22,6 +21,7 @@ footer {
             grid-area: footer__masthead;
             display: flex;
             flex-direction: column;
+            padding: 0 20px;
 
             .logos {
             display:flex;
@@ -44,6 +44,7 @@ footer {
         .links {
             grid-area: links;
             width: 100%;
+            padding: 0 20px;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
@@ -55,6 +56,8 @@ footer {
             }
 
             ul {
+                margin: 0 10px;
+
                 li{
                     font-size: .875rem;
                     font-weight: 400;
@@ -67,8 +70,19 @@ footer {
         .copyright {
             grid-area: copyright;
             display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            & > * { 
+                justify-self: flex-start;
+                align-self: center;
+                margin-left: 40px;
+            }
         }
 }
+
 @media screen and (max-width: 768px) {
     footer {
         grid-template-areas:
@@ -91,17 +105,26 @@ footer {
                 align-self: center;
                 justify-self: center;
             }
+            h4 {
+                padding-top: 40px;
+                width: 90%;
+            }
         }
 
         .links {
+            padding: 0;
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
-            margin-top: 20px;
 
             & > * { 
                 align-self: flex-start;
                 justify-self: space-between;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
             }
 
             /* Style for accordion */
@@ -114,7 +137,7 @@ footer {
                 outline: none;
                 transition: 0.4s;
                 border-top: .5px solid #A2A2A290;
-                padding: 1.5rem 0;
+                // padding: 1.5rem 0;
 
                 &:last-child {
                     border-bottom: .5px solid #A2A2A290;
@@ -125,7 +148,6 @@ footer {
                 overflow: hidden;
                 transition: max-height 1s ease-out;
             }
-
             h5:after {
                 content: '\02795';
                 font-family: "Font Awesome 5 Free";
@@ -153,6 +175,7 @@ footer {
             & > * { 
                 align-self: center;
                 justify-self: center;
+                margin: 0;
             }
         }
     }
