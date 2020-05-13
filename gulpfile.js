@@ -91,4 +91,4 @@ function watch() {
 exports.style = style;
 exports.scripts = scripts;
 exports.images = images;
-exports.watch = watch; //para lanzar este plugin escribir en la Terminal "gulp watch" (dentro de la carpeta del proyecto)
+exports.watch = watch;
